@@ -45,17 +45,17 @@
             };
 
 
-            ttq.load('D60EK2RC77U581RV6HMG');
+            ttq.load('D60ESRBC77U70QB7A3CG');
             ttq.page();
 
-            // Identify user (placeholders for PII)
+            // Identify user (standard placeholders)
             ttq.identify({
                 "email": "<hashed_email_address>",
                 "phone_number": "<hashed_phone_number>",
                 "external_id": "<hashed_external_id>"
             });
 
-            // Track page view content
+            // Track ViewContent on page load
             ttq.track('ViewContent', {
                 "contents": [
                     {
@@ -72,7 +72,7 @@
                 "currency": "BRL"
             });
 
-            // Track InitiateCheckout and AddToCart on CTA clicks
+            // Track InitiateCheckout on CTA clicks
             window.addEventListener('DOMContentLoaded', () => {
                 const checkoutLinks = document.querySelectorAll('a[href*="pay.cakto.com.br"]');
                 checkoutLinks.forEach(link => {
@@ -83,21 +83,10 @@
                                     "content_id": "alarme_mental_01",
                                     "content_type": "product",
                                     "content_name": "Alarme Mental",
+                                    "content_category": "Digital Product",
                                     "price": 97.99,
-                                    "num_items": 1
-                                }
-                            ],
-                            "value": 97.99,
-                            "currency": "BRL"
-                        });
-                        ttq.track('AddToCart', {
-                            "contents": [
-                                {
-                                    "content_id": "alarme_mental_01",
-                                    "content_type": "product",
-                                    "content_name": "Alarme Mental",
-                                    "price": 97.99,
-                                    "num_items": 1
+                                    "num_items": 1,
+                                    "brand": "Alarme Mental"
                                 }
                             ],
                             "value": 97.99,
