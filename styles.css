@@ -102,17 +102,20 @@ h4 {
     background: var(--neon-green);
     color: #000;
     font-weight: 900;
-    padding: 20px 50px;
+    padding: 22px 60px;
     border-radius: 50px;
     text-decoration: none;
-    font-size: 20px;
-    box-shadow: 0 0 20px rgba(0, 255, 136, 0.4);
-    transition: transform 0.2s;
+    font-size: 22px;
+    box-shadow: 0 0 30px rgba(0, 255, 136, 0.6);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
 }
 
 .cta-button:hover {
-    transform: scale(1.05);
+    transform: scale(1.05) translateY(-3px);
     background: #fff;
+    box-shadow: 0 10px 40px rgba(0, 255, 136, 0.8);
+    border-color: var(--neon-green);
 }
 
 .cta-button-small {
@@ -496,6 +499,62 @@ summary {
 details p {
     margin-top: 10px;
     color: #ccc;
+}
+
+/* === COST OF INACTION === */
+.cost-section {
+    padding: 80px 0;
+    background: linear-gradient(180deg, #000 0%, #1a0000 100%);
+    border-top: 1px solid #300;
+}
+
+.cost-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.cost-card {
+    background: rgba(20, 0, 0, 0.5);
+    border: 1px solid #411;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.cost-card i {
+    font-size: 40px;
+    color: var(--neon-red);
+    margin-bottom: 20px;
+}
+
+.cost-card h3 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.cost-card p {
+    color: #a88;
+}
+
+.highlight-gold {
+    color: var(--neon-gold);
+    font-weight: 900;
+}
+
+.badge-low-friction {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0, 255, 136, 0.1);
+    border: 1px solid var(--neon-green);
+    color: var(--neon-green);
+    padding: 10px 20px;
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 20px;
 }
 
 footer {
