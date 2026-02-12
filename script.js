@@ -46,4 +46,28 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.reveal').forEach(el => {
         observer.observe(el);
     });
+
+    /* --- Countdown Timer --- */
+    function startTimer(duration, display) {
+        let timer = duration, minutes, seconds;
+        const interval = setInterval(function () {
+            minutes = parseInt(timer / 60, 10);
+            seconds = parseInt(timer % 60, 10);
+
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            display.textContent = minutes + ":" + seconds;
+
+            if (--timer < 0) {
+                timer = duration; // Reset or stop
+            }
+        }, 1000);
+    }
+
+    const fifteenMinutes = 60 * 15;
+    const display = document.querySelector('#countdown');
+    if (display) {
+        startTimer(fifteenMinutes, display);
+    }
 });
