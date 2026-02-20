@@ -33,6 +33,7 @@ body {
     overflow-x: hidden;
     width: 100%;
     position: relative;
+    max-width: 100vw;
     -webkit-text-size-adjust: 100%;
 }
 
@@ -133,6 +134,16 @@ strong {
     margin-right: auto;
     text-transform: none;
     font-weight: 500;
+}
+
+.hero-video-wrapper {
+    max-width: 320px;
+    margin: 0 auto 40px;
+    border: 4px solid var(--neon-green);
+    border-radius: 35px;
+    overflow: hidden;
+    box-shadow: 0 0 50px var(--neon-green-glow);
+    background: #000;
 }
 
 /* === BUTTONS === */
@@ -261,6 +272,7 @@ strong {
     color: #fff;
     margin: 0;
     font-weight: 500;
+    font-size: clamp(14px, 2vw, 16px);
 }
 
 .id-footer {
@@ -362,7 +374,7 @@ strong {
 }
 
 .activation-subtitle {
-    font-size: 20px;
+    font-size: clamp(16px, 3vw, 20px);
     color: #fff;
     opacity: 0.8;
 }
@@ -430,7 +442,7 @@ strong {
 }
 
 .testimonial-text {
-    font-size: 18px;
+    font-size: clamp(16px, 2.5vw, 18px);
     font-style: italic;
     margin-bottom: 25px;
     color: #fff;
@@ -860,14 +872,60 @@ strong {
 /* === MOBILE REFINEMENTS === */
 @media (max-width: 768px) {
     .final-price {
-        font-size: 64px;
+        font-size: 48px;
     }
 
     .offer-price {
-        font-size: 64px;
+        font-size: 54px;
     }
 
     .hero-section {
-        padding: 80px 0 60px;
+        padding: 60px 0 40px;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .main-headline {
+        line-height: 1.2;
+    }
+
+    .id-card {
+        padding: 15px;
+    }
+
+    .testimonial-card {
+        padding: 25px;
+    }
+}
+
+/* === FLOATING CTA === */
+.floating-cta {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    z-index: 1000;
+    width: 90%;
+    max-width: 400px;
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.floating-cta.visible {
+    transform: translateX(-50%) translateY(0);
+}
+
+.floating-cta .cta-button {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 50px;
+    box-shadow: 0 10px 30px rgba(0, 255, 136, 0.4);
+}
+
+@media (min-width: 769px) {
+    .floating-cta {
+        display: none;
     }
 }
