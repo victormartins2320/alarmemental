@@ -17,17 +17,48 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    /* --- Checkout Link Tracking Event --- */
-    // Tracks clicks on any link going to Cakto
+    /* --- Checkout Link Tracking & Bot Prevention --- */
+    // Tracks clicks on any link going to Cakto and prevents bots from triggering UTMify IC
     const checkoutLinks = document.querySelectorAll('a[href*="pay.cakto.com.br"]');
+    
+    // First, remove utmify-ic class to prevent premature bot tracking 
     checkoutLinks.forEach(link => {
+        if (link.classList.contains('utmify-ic')) {
+            link.classList.remove('utmify-ic');
+        }
+        link.dataset.isCheckout = 'true'; // mark for later
+        
         link.addEventListener('click', (e) => {
-            console.log('InitiateCheckout fired');
+            // Anti-bot click verification
+            if (!e.isTrusted) return;
+            
+            console.log('InitiateCheckout fired via click');
             if (typeof fbq === 'function') {
                 fbq('track', 'InitiateCheckout');
             }
-            // Optional: Add other pixels here if needed
         });
+    });
+
+    // Strategy to add utmify-ic back ONLY when a real human interaction occurs
+    let humanInteracted = false;
+    const enableUtmifyTracking = () => {
+        if (humanInteracted) return;
+        humanInteracted = true;
+        
+        console.log("Human interaction detected, enabling UTMify checkouts");
+        document.querySelectorAll('a[data-is-checkout="true"]').forEach(link => {
+            link.classList.add('utmify-ic');
+        });
+
+        // Cleanup event listeners
+        ['mousemove', 'touchstart', 'scroll', 'keydown'].forEach(evt => {
+            window.removeEventListener(evt, enableUtmifyTracking);
+        });
+    };
+
+    // Attach passive listeners for human interaction
+    ['mousemove', 'touchstart', 'scroll', 'keydown'].forEach(evt => {
+        window.addEventListener(evt, enableUtmifyTracking, { once: true, passive: true });
     });
 
     /* --- Intersection Observer for Animations --- */
