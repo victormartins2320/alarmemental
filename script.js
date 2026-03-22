@@ -101,15 +101,5 @@ document.addEventListener('DOMContentLoaded', () => {
     if (display) {
         startTimer(fifteenMinutes, display);
     }
-    /* --- Floating CTA Visibility --- */
-    const floatingCta = document.querySelector('#floating-cta');
-    if (floatingCta) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 500) {
-                floatingCta.classList.add('visible');
-            } else {
-                floatingCta.classList.remove('visible');
-            }
-        });
-    }
+    /* --- Floating CTA Visibility Removed --- */
 });
