@@ -31,6 +31,11 @@
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.text-neon-green { color: var(--neon-green) !important; }
+.text-neon-red { color: var(--neon-red) !important; }
+.text-neon-blue { color: var(--neon-blue) !important; }
+.text-neon-purple { color: var(--neon-purple) !important; }
+
 html,
 body {
     overflow-x: hidden;
@@ -279,20 +284,35 @@ strong {
 }
 
 .id-footer {
-    max-width: 600px;
-    margin: 0 auto;
+    max-width: 800px;
+    margin: 40px auto 0;
     text-align: center;
 }
 
+.id-footer h3 {
+    color: #fff;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-transform: none;
+}
+
+.id-footer p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: var(--color-text-dim);
+}
+
 .loop-box {
-    background: rgba(255, 51, 68, 0.1);
-    border: 1px solid rgba(255, 51, 68, 0.3);
-    color: var(--neon-red);
-    padding: 15px 30px;
+    background: rgba(0, 255, 136, 0.05);
+    border: 1px solid rgba(0, 255, 136, 0.3);
+    color: #fff;
+    padding: 20px 40px;
     border-radius: 12px;
     font-weight: 700;
     margin-bottom: 30px;
     display: inline-block;
+    font-size: 18px;
 }
 
 .cta-secondary {
@@ -578,6 +598,15 @@ strong {
 .product-presentation-section {
     padding: 100px 0;
     background: radial-gradient(circle at center, #0a1a0f 0%, #050505 70%);
+}
+
+.section-description {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    font-size: 18px;
+    color: var(--color-text-dim);
+    line-height: 1.6;
 }
 
 .product-grid {
@@ -1106,4 +1135,28 @@ strong {
     .floating-cta {
         display: none;
     }
+}
+
+/* === TRUST & SECURITY === */
+.security-ribbon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    opacity: 0.6;
+    font-size: 24px;
+    color: var(--color-text-dim);
+    margin-top: 15px;
+}
+
+.security-ribbon span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.security-ribbon i {
+    font-size: 28px;
 }
