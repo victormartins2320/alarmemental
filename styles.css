@@ -7,28 +7,39 @@
 }
 
 :root {
-    --color-bg: #050505;
-    --color-card-bg: #111111;
-    --color-text: #ffffff;
-    --color-text-dim: #a0a0a0;
+    --color-bg: #030303;
+    --color-card-bg: #0a0a0a;
+    --color-text: #f0f0f0;
+    --color-text-dim: #b0b0b0;
 
-    --neon-green: #00ff88;
-    --neon-green-glow: rgba(0, 255, 136, 0.4);
-    --neon-red: #ff3344;
-    --neon-red-glow: rgba(255, 51, 68, 0.4);
-    --neon-blue: #00e1ff;
+    --premium-green: #00d676; /* Softer, more professional */
+    --premium-green-glow: rgba(0, 214, 118, 0.25);
+    --warning-red: #ff4d4d;
+    --warning-red-glow: rgba(255, 77, 77, 0.25);
+    --premium-blue: #00bfff;
 
-    --neon-purple: #bf00ff;
-    --neon-purple-glow: rgba(191, 0, 255, 0.4);
+    --premium-purple: #a855f7;
+    --premium-purple-glow: rgba(168, 85, 247, 0.25);
 
-    --glass-bg: rgba(255, 255, 255, 0.03);
-    --glass-border: rgba(255, 255, 255, 0.08);
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
 
     --font-main: 'Inter', sans-serif;
     --font-heading: 'Montserrat', sans-serif;
 
-    --container: 1000px;
-    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --container: 1100px; /* Slightly wider for modern look */
+    --transition: all 0.4s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+/* Backwards compatibility for old variable names used in HTML */
+:root {
+    --neon-green: var(--premium-green);
+    --neon-green-glow: var(--premium-green-glow);
+    --neon-red: var(--warning-red);
+    --neon-red-glow: var(--warning-red-glow);
+    --neon-blue: var(--premium-blue);
+    --neon-purple: var(--premium-purple);
+    --neon-purple-glow: var(--premium-purple-glow);
 }
 
 .text-neon-green { color: var(--neon-green) !important; }
@@ -49,14 +60,15 @@ body {
     background-color: var(--color-bg);
     color: var(--color-text);
     font-family: var(--font-main);
-    line-height: 1.6;
+    line-height: 1.8; /* Increased for older eyes */
+    font-size: 18px; /* Slightly larger base size */
     -webkit-font-smoothing: antialiased;
 }
 
 .container {
     max-width: var(--container);
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 25px;
 }
 
 .center-text {
@@ -68,18 +80,20 @@ h2,
 h3,
 h4 {
     font-family: var(--font-heading);
-    font-weight: 900;
+    font-weight: 800; /* Slightly less heavy than 900 */
     text-transform: uppercase;
-    line-height: 1.1;
-    letter-spacing: -0.02em;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
 }
 
 p {
     color: var(--color-text-dim);
+    font-size: 1.05rem;
 }
 
 strong {
     color: #fff;
+    font-weight: 700;
 }
 
 .hero-section {
