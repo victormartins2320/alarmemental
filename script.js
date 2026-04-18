@@ -1,4 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // TikTok: Track Page View Content
+    if (typeof ttq !== 'undefined') {
+        ttq.track('ViewContent');
+    }
+
 
     /* --- Smooth Scroll for specific anchors --- */
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -36,7 +41,13 @@ document.addEventListener('DOMContentLoaded', () => {
             if (typeof fbq === 'function') {
                 fbq('track', 'InitiateCheckout');
             }
+
+            // TikTok: Track Initiate Checkout
+            if (typeof ttq !== 'undefined') {
+                ttq.track('InitiateCheckout');
+            }
         });
+
     });
 
     // Strategy to add utmify-ic back ONLY when a real human interaction occurs
