@@ -299,6 +299,63 @@ mark {
     border: none;
 }
 
+/* === PROMISE SECTION === */
+.promise-section {
+    padding: 60px 0;
+    background: #FFF;
+    border-bottom: 1px solid var(--border-soft);
+}
+
+/* === DELIVERABLES SECTION === */
+.deliverables-section {
+    padding: 80px 0;
+    background: #FFF;
+}
+.deliverables-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+.deliverable-item {
+    display: flex;
+    gap: 20px;
+    background: var(--color-card-bg);
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid var(--border-soft);
+    box-shadow: var(--shadow-sm);
+}
+.deliverable-icon {
+    font-size: 32px;
+    color: var(--trust-blue);
+    flex-shrink: 0;
+    background: #FFF;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+.deliverable-text h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.deliverable-text p {
+    font-size: 16px;
+    color: var(--color-text-dim);
+    margin-bottom: 0;
+}
+@media (max-width: 768px) {
+    .deliverable-item {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+}
+
 /* === OFFER SECTION === */
 .offer-section {
     padding: 100px 0;
@@ -450,8 +507,22 @@ mark {
         transform: scale(1);
     }
     .pricing-grid {
-        grid-template-columns: 1fr;
-        padding: 0 10px;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding: 10px;
+        padding-bottom: 20px;
+        gap: 20px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none; /* Firefox */
+    }
+    .pricing-grid::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera */
+    }
+    .pricing-card {
+        flex: 0 0 85vw;
+        scroll-snap-align: center;
     }
     .offer-section {
         padding: 60px 0;
