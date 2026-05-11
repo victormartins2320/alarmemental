@@ -36,4 +36,22 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // 3. Floating CTA Visibility
+    const floatingCta = document.getElementById('floating-cta');
+    window.addEventListener('scroll', () => {
+        if (window.innerWidth <= 768) {
+            if (window.scrollY > 800) {
+                floatingCta.style.display = 'block';
+                setTimeout(() => floatingCta.classList.add('visible'), 10);
+            } else {
+                floatingCta.classList.remove('visible');
+                setTimeout(() => {
+                    if (!floatingCta.classList.contains('visible')) {
+                        floatingCta.style.display = 'none';
+                    }
+                }, 400);
+            }
+        }
+    });
 });
