@@ -450,10 +450,10 @@
             </ul>
           </div>
           <div class="offer-card-footer">
-            <a href="https://pay.cakto.com.br/xh2puk8" class="btn-primary btn-offer utmify-ic" id="basic-checkout-btn">
+            <button type="button" class="btn-primary btn-offer" id="basic-checkout-btn">
               Acessar Plano Básico
               <i class="fa-solid fa-arrow-right"></i>
-            </a>
+            </button>
             <div class="offer-access-note">
               <i class="fa-regular fa-envelope"></i>
               <span>Acesso imediato por E-mail</span>
@@ -495,7 +495,7 @@
             </ul>
           </div>
           <div class="offer-card-footer">
-            <a href="https://pay.cakto.com.br/b7ojhu5_505857" class="btn-primary btn-offer utmify-ic" id="offer-cta-btn">
+            <a href="https://pay.cakto.com.br/b7ojhu5_977711" class="btn-primary btn-offer utmify-ic" id="offer-cta-btn">
               Acessar Plano Premium + Bônus
               <i class="fa-solid fa-arrow-right"></i>
             </a>
@@ -611,6 +611,32 @@
       <i class="fa-solid fa-bolt"></i>
       QUERO COMEÇAR AGORA — R$ 19,90
     </a>
+  </div>
+
+  <!-- ===== DOWNSELL MODAL ===== -->
+  <div id="downsell-modal" class="downsell-overlay" aria-hidden="true" style="display: none;">
+    <div class="downsell-card">
+      <button class="downsell-close" id="downsell-close-btn" aria-label="Fechar">&times;</button>
+      <div class="downsell-badge">OFERTA DE ÚLTIMA HORA</div>
+      <h2>Upgrade Completo por R$ 47,00</h2>
+      <p class="downsell-subtitle">Vimos que você escolheu o Plano Básico. Que tal levar o <strong>Plano Premium Completo</strong> com R$ 10,00 de desconto?</p>
+      
+      <ul class="downsell-list">
+        <li><i class="fa-solid fa-check"></i> 21 Vídeos Ativadores + Área Premium</li>
+        <li><i class="fa-solid fa-check"></i> Acesso Vitalício + Atualizações Gratuitas</li>
+        <li><i class="fa-solid fa-gift"></i> Todos os 7 Manuais de Bônus Inclusos</li>
+      </ul>
+
+      <div class="downsell-actions">
+        <a href="https://pay.cakto.com.br/swxse8y_977711" class="btn-primary btn-downsell-upgrade utmify-ic" id="downsell-accept-btn">
+          SIM, QUERO O PREMIUM POR R$ 47,00
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <a href="https://pay.cakto.com.br/xh2puk8_977711" class="btn-downsell-decline utmify-ic" id="downsell-decline-btn">
+          Não, quero apenas o Plano Básico por R$ 19,90
+        </a>
+      </div>
+    </div>
   </div>
 
   <script src="script.js"></script>

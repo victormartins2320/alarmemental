@@ -136,4 +136,38 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ---- 7. Downsell Modal Trigger & Lifecycle ----
+  const basicBtn = document.getElementById('basic-checkout-btn');
+  const downsellModal = document.getElementById('downsell-modal');
+  const closeBtn = document.getElementById('downsell-close-btn');
+
+  if (basicBtn && downsellModal) {
+    // Open Modal
+    basicBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      downsellModal.style.display = 'flex';
+      downsellModal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden'; // Lock background scrolling
+    });
+
+    // Close Modal Function
+    const closeModal = () => {
+      downsellModal.style.display = 'none';
+      downsellModal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = ''; // Unlock background scrolling
+    };
+
+    // Close on X Click
+    if (closeBtn) {
+      closeBtn.addEventListener('click', closeModal);
+    }
+
+    // Close on Overlay Background Click
+    downsellModal.addEventListener('click', (e) => {
+      if (e.target === downsellModal) {
+        closeModal();
+      }
+    });
+  }
+
 });

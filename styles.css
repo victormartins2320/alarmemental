@@ -1621,3 +1621,156 @@ h1, h2, h3, h4 {
     display: block;
   }
 }
+
+/* ===== 20. DOWNSELL MODAL ===== */
+.downsell-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(9, 11, 10, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.downsell-card {
+  background: var(--grad-card);
+  border: 1px solid var(--border-dark);
+  border-radius: var(--r-xl);
+  max-width: 500px;
+  width: 100%;
+  padding: 48px 40px;
+  text-align: center;
+  box-shadow: 0 0 50px rgba(0, 255, 102, 0.15);
+  animation: modal-enter 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.downsell-close {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: var(--text-500);
+  cursor: pointer;
+  transition: color var(--t-fast);
+  line-height: 1;
+}
+
+.downsell-close:hover {
+  color: var(--text-900);
+}
+
+@keyframes modal-enter {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.downsell-badge {
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--neon-green);
+  background-color: rgba(0, 255, 102, 0.08);
+  border: 1px solid rgba(0, 255, 102, 0.15);
+  padding: 6px 16px;
+  border-radius: var(--r-full);
+  display: inline-block;
+  margin-bottom: 24px;
+  text-shadow: 0 0 8px rgba(0, 255, 102, 0.2);
+}
+
+.downsell-card h2 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  color: var(--text-900);
+}
+
+.downsell-subtitle {
+  font-size: 15px;
+  color: var(--text-700);
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.downsell-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.downsell-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  color: var(--text-700);
+}
+
+.downsell-list li i {
+  color: var(--neon-green);
+  font-size: 14px;
+  text-shadow: 0 0 6px var(--neon-green);
+}
+
+.downsell-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.btn-downsell-upgrade {
+  width: 100%;
+  padding: 18px 24px;
+  font-size: 15px;
+  font-weight: 700;
+  box-shadow: 0 0 25px rgba(0, 255, 102, 0.35);
+}
+
+.btn-downsell-upgrade:hover {
+  box-shadow: 0 0 35px rgba(0, 255, 102, 0.65);
+}
+
+.btn-downsell-decline {
+  font-size: 13.5px;
+  font-weight: 650;
+  color: var(--text-500);
+  transition: color var(--t-fast);
+  cursor: pointer;
+  background: none;
+  border: none;
+  text-decoration: underline;
+}
+
+.btn-downsell-decline:hover {
+  color: var(--text-700);
+}
+
+@media (max-width: 640px) {
+  .downsell-card {
+    padding: 36px 24px;
+  }
+  .downsell-card h2 {
+    font-size: 24px;
+  }
+}
