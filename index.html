@@ -29,28 +29,6 @@
     document.head.appendChild(a);
   </script>
 
-  <!-- TikTok Pixel Code Start -->
-  <script>
-    !(function (w, d, t) {
-      w.TiktokAnalyticsObject = t;
-      var ttq = (w[t] = w[t] || []);
-      (ttq.methods = ["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"]),
-        (ttq.setAndDefer = function (t, e) { t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))); }; });
-      for (var i = 0; i < ttq.methods.length; i++) ttq.setAndDefer(ttq, ttq.methods[i]);
-      (ttq.instance = function (t) { for (var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++) ttq.setAndDefer(e, ttq.methods[n]); return e; }),
-        (ttq.load = function (e, n) {
-          var r = "https://analytics.tiktok.com/i18n/pixel/events.js", o = n && n.partner;
-          (ttq._i = ttq._i || {}), (ttq._i[e] = []), (ttq._i[e]._u = r), (ttq._t = ttq._t || {}), (ttq._t[e] = +new Date()), (ttq._o = ttq._o || {}), (ttq._o[e] = n || {});
-          n = document.createElement("script");
-          (n.type = "text/javascript"), (n.async = !0), (n.src = r + "?sdkid=" + e + "&lib=" + t);
-          e = document.getElementsByTagName("script")[0];
-          e.parentNode.insertBefore(n, e);
-        });
-      ttq.load("D60ESRBC77U70QB7A3CG");
-      ttq.page();
-    })(window, document, "ttq");
-  </script>
-  <!-- TikTok Pixel Code End -->
 </head>
 
 <body>
@@ -68,274 +46,128 @@
 
   <!-- ===== HERO ===== -->
   <section class="hero" id="hero">
-    <div class="hero-container">
+    <div class="container hero-container">
       <div class="hero-text reveal">
-        <div class="hero-label">Método Digital · Acesso Imediato</div>
-        <h1 class="hero-headline">Pare de terminar seus dias com a sensação de que poderia ter feito mais.</h1>
-        <p class="hero-sub">O Alarme Mental é um método prático para ajudar você a sair da procrastinação, agir com mais consistência e recuperar o controle da sua rotina.</p>
-        
+        <span class="hero-badge">Método Digital · Acesso Imediato</span>
+        <h1 class="hero-headline">Pare de adiar sua vida e comece a agir com mais consistência.</h1>
+        <p class="hero-sub">O Alarme Mental reúne um método prático, vídeos ativadores e exercícios para ajudar você a vencer a procrastinação e recuperar o controle da sua rotina.</p>
+
         <div class="hero-cta-wrapper">
-          <a href="#prova-visual" class="btn-primary utmify-ic" id="hero-cta-btn">
-            QUERO COMEÇAR AGORA
-            <i class="fa-solid fa-arrow-down"></i>
-          </a>
-          <span class="secure-badge"><i class="fa-solid fa-lock"></i> Pagamento 100% seguro.</span>
-        </div>
-
-        <ul class="hero-checks">
-          <li><i class="fa-solid fa-check"></i> Acesso imediato</li>
-          <li><i class="fa-solid fa-check"></i> Acesso vitalício</li>
-          <li><i class="fa-solid fa-check"></i> Garantia de 7 dias</li>
-          <li><i class="fa-solid fa-check"></i> Plataforma online</li>
-        </ul>
-      </div>
-      <div class="hero-mockup-wrapper reveal">
-        <div class="mockup-frame">
-          <img src="banner.png" alt="Plataforma Alarme Mental no Notebook" class="mockup-notebook" loading="lazy" />
-          <img src="app_mockup.png" alt="Plataforma Alarme Mental no Celular" class="mockup-mobile" loading="lazy" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== PROVA VISUAL ===== -->
-  <section class="section visual-proof-section" id="prova-visual">
-    <div class="container">
-      <div class="proof-header reveal">
-        <h2 class="proof-text">Método desenvolvido para quem deseja transformar intenção em ação.</h2>
-      </div>
-      <div class="proof-mockup reveal">
-        <div class="large-mockup-frame">
-          <img src="sunrise_calm.png" alt="Visão geral do Alarme Mental" class="large-mockup-img" loading="lazy" />
-        </div>
-      </div>
-      <div class="proof-cta reveal" style="text-align: center; margin-top: 48px;">
-        <a href="#identificacao" class="btn-primary utmify-ic" id="proof-cta-btn">
-          Identificar meus padrões
-          <i class="fa-solid fa-arrow-down"></i>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== IDENTIFICAÇÃO ===== -->
-  <section class="section identification-section" id="identificacao">
-    <div class="container">
-      <div class="section-header reveal">
-        <p class="section-eyebrow">Diagnóstico</p>
-        <h2 class="section-title">Talvez o problema não seja falta de disciplina.</h2>
-      </div>
-
-      <div class="id-flow reveal">
-        <!-- Row 1 -->
-        <div class="id-row">
-          <div class="id-card">
-            <div class="id-card-icon"><i class="fa-solid fa-brain"></i></div>
-            <p>Você sabe exatamente o que precisa fazer.</p>
-          </div>
-          <div class="id-arrow"><i class="fa-solid fa-arrow-down-long"></i></div>
-          <div class="id-card id-card--red">
-            <div class="id-card-icon"><i class="fa-solid fa-hourglass"></i></div>
-            <p>Mas continua adiando.</p>
-          </div>
-        </div>
-
-        <!-- Row 2 -->
-        <div class="id-row">
-          <div class="id-card">
-            <div class="id-card-icon"><i class="fa-solid fa-face-frown"></i></div>
-            <p>Você termina o dia frustrado.</p>
-          </div>
-          <div class="id-arrow"><i class="fa-solid fa-arrow-down-long"></i></div>
-          <div class="id-card id-card--red">
-            <div class="id-card-icon"><i class="fa-solid fa-briefcase"></i></div>
-            <p>Mesmo tendo trabalhado.</p>
-          </div>
-        </div>
-
-        <!-- Row 3 -->
-        <div class="id-row">
-          <div class="id-card">
-            <div class="id-card-icon"><i class="fa-solid fa-folder-open"></i></div>
-            <p>Você começa vários projetos.</p>
-          </div>
-          <div class="id-arrow"><i class="fa-solid fa-arrow-down-long"></i></div>
-          <div class="id-card id-card--red">
-            <div class="id-card-icon"><i class="fa-solid fa-ban"></i></div>
-            <p>Mas quase nunca termina.</p>
-          </div>
-        </div>
-
-        <!-- Row 4 -->
-        <div class="id-row">
-          <div class="id-card">
-            <div class="id-card-icon"><i class="fa-solid fa-repeat"></i></div>
-            <p>Você promete: "Amanhã eu começo."</p>
-          </div>
-          <div class="id-arrow"><i class="fa-solid fa-arrow-down-long"></i></div>
-          <div class="id-card id-card--red">
-            <div class="id-card-icon"><i class="fa-solid fa-rotate-left"></i></div>
-            <p>Mas tudo se repete.</p>
-          </div>
-        </div>
-
-        <!-- Olive green final card -->
-        <div class="id-card-final reveal">
-          <div class="id-final-icon"><i class="fa-solid fa-circle-exclamation"></i></div>
-          <h3>Você não precisa de mais motivação.</h3>
-          <p>Você precisa aprender a agir mesmo quando ela não existe.</p>
-          <a href="#metodo" class="btn-primary utmify-ic" id="id-cta-btn" style="background-color: var(--white); color: var(--olive-700); margin-top: 16px; box-shadow: none;">
-            Entender como resolver isso
-            <i class="fa-solid fa-arrow-down"></i>
+          <a href="#para-quem" class="btn-primary utmify-ic" id="hero-cta-btn">
+            QUERO ACESSAR AGORA
+            <i class="fa-solid fa-arrow-right"></i>
           </a>
         </div>
+
+        <div class="hero-seals">
+          <span class="hero-seal"><i class="fa-solid fa-bolt"></i> Acesso imediato</span>
+          <span class="hero-seal"><i class="fa-solid fa-shield-halved"></i> Garantia de 7 dias</span>
+          <span class="hero-seal"><i class="fa-solid fa-infinity"></i> Acesso vitalício</span>
+        </div>
+      </div>
+
+      <div class="hero-mockup reveal">
+        <div class="mockup-desktop">
+          <img src="banner.png" alt="Plataforma Alarme Mental no Desktop" loading="eager" />
+        </div>
+        <div class="mockup-mobile-float">
+          <img src="app_mockup.png" alt="Plataforma Alarme Mental no Celular" loading="eager" />
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== O MÉTODO ===== -->
-  <section class="section method-section" id="metodo">
+  <!-- ===== PARA QUEM É ===== -->
+  <section class="section section--beige" id="para-quem">
     <div class="container">
-      <div class="section-header reveal">
-        <p class="section-eyebrow">A Estrutura</p>
-        <h2 class="section-title">Como funciona o Alarme Mental.</h2>
+      <div class="section-header section-header--center reveal">
+        <p class="section-eyebrow">Para quem é</p>
+        <h2 class="section-title" style="margin: 0 auto;">O Alarme Mental é para você que...</h2>
       </div>
 
-      <div class="timeline-container reveal">
-        <div class="timeline-step">
-          <span class="step-num">Passo 1</span>
-          <div class="step-icon"><i class="fa-solid fa-magnifying-glass-brain"></i></div>
-          <h3>Entenda seus padrões.</h3>
+      <div class="audience-grid">
+        <div class="audience-card reveal">
+          <div class="audience-icon"><i class="fa-solid fa-brain"></i></div>
+          <h3>Sabe o que fazer</h3>
+          <p>Mas não consegue começar. Adia tarefas importantes mesmo sabendo da urgência.</p>
         </div>
-        <div class="timeline-step">
-          <span class="step-num">Passo 2</span>
-          <div class="step-icon"><i class="fa-solid fa-list-check"></i></div>
-          <h3>Aplique os exercícios.</h3>
+        <div class="audience-card reveal">
+          <div class="audience-icon"><i class="fa-solid fa-face-frown"></i></div>
+          <h3>Termina o dia frustrado</h3>
+          <p>Sente que poderia ter feito mais. A culpa aparece toda noite antes de dormir.</p>
         </div>
-        <div class="timeline-step">
-          <span class="step-num">Passo 3</span>
-          <div class="step-icon"><i class="fa-solid fa-play"></i></div>
-          <h3>Assista aos Vídeos Ativadores.</h3>
+        <div class="audience-card reveal">
+          <div class="audience-icon"><i class="fa-solid fa-folder-open"></i></div>
+          <h3>Começa e não termina</h3>
+          <p>Projetos abandonados se acumulam. A motivação inicial some rápido.</p>
         </div>
-        <div class="timeline-step">
-          <span class="step-num">Passo 4</span>
-          <div class="step-icon"><i class="fa-solid fa-calendar-check"></i></div>
-          <h3>Construa uma rotina consistente.</h3>
+        <div class="audience-card reveal">
+          <div class="audience-icon"><i class="fa-solid fa-repeat"></i></div>
+          <h3>Vive no "amanhã eu começo"</h3>
+          <p>O ciclo se repete toda semana. A promessa de mudança nunca se concretiza.</p>
         </div>
-      </div>
-      <div class="method-cta reveal" style="text-align: center; margin-top: 48px;">
-        <a href="#entregaveis" class="btn-primary utmify-ic" id="method-cta-btn">
-          Ver o que você recebe
-          <i class="fa-solid fa-arrow-down"></i>
-        </a>
+        <div class="audience-card reveal">
+          <div class="audience-icon"><i class="fa-solid fa-clock"></i></div>
+          <h3>Perde tempo com distrações</h3>
+          <p>Celular, redes sociais e tarefas menores consomem o dia inteiro sem perceber.</p>
+        </div>
+        <div class="audience-card reveal">
+          <div class="audience-icon"><i class="fa-solid fa-battery-quarter"></i></div>
+          <h3>Sente falta de energia</h3>
+          <p>Não é preguiça. É um padrão mental que drena sua capacidade de agir.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== ENTREGÁVEIS ===== -->
+  <!-- ===== TUDO QUE VOCÊ RECEBE ===== -->
   <section class="section deliverables-section" id="entregaveis">
     <div class="container">
-      <div class="section-header reveal">
-        <p class="section-eyebrow">O que você recebe</p>
-        <h2 class="section-title">Tudo que você recebe.</h2>
+      <div class="section-header section-header--center reveal">
+        <p class="section-eyebrow">O que está incluso</p>
+        <h2 class="section-title" style="margin: 0 auto;">Tudo que você recebe.</h2>
       </div>
 
-      <div class="deliverables-grid reveal">
-        <div class="deliverable-card">
+      <div class="deliverables-grid">
+        <div class="deliverable-card reveal">
           <div class="del-icon"><i class="fa-solid fa-book-open"></i></div>
           <h3>Manual Neurológico</h3>
-          <p>Entenda o funcionamento biológico do cérebro na procrastinação e aplique técnicas para revertê-lo.</p>
+          <p>Entenda o funcionamento do cérebro na procrastinação e aplique técnicas práticas.</p>
         </div>
-        <div class="deliverable-card">
+        <div class="deliverable-card reveal">
           <div class="del-icon"><i class="fa-solid fa-circle-play"></i></div>
           <h3>21 Vídeos Ativadores</h3>
-          <p>Aulas objetivas prontas para assistir e aplicar em menos de 5 minutos diários.</p>
+          <p>Aulas objetivas para assistir e aplicar em menos de 5 minutos por dia.</p>
         </div>
-        <div class="deliverable-card">
+        <div class="deliverable-card reveal">
           <div class="del-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
           <h3>Área de Membros</h3>
-          <p>Navegação intuitiva, moderna e otimizada para acessar do celular ou do computador.</p>
+          <p>Plataforma moderna e intuitiva. Acesse do celular ou computador.</p>
         </div>
-        <div class="deliverable-card">
+        <div class="deliverable-card reveal">
+          <div class="del-icon"><i class="fa-solid fa-arrows-rotate"></i></div>
+          <h3>Atualizações Gratuitas</h3>
+          <p>Receba novas aulas e materiais automaticamente, sem custo adicional.</p>
+        </div>
+        <div class="deliverable-card reveal">
           <div class="del-icon"><i class="fa-solid fa-infinity"></i></div>
           <h3>Acesso Vitalício</h3>
-          <p>Estude no seu próprio ritmo, sem cobranças recorrentes ou limite de tempo de uso.</p>
-        </div>
-        <div class="deliverable-card">
-          <div class="del-icon"><i class="fa-solid fa-arrows-rotate"></i></div>
-          <h3>Atualizações Futuras</h3>
-          <p>Receba todas as novas aulas, materiais de apoio e melhorias de forma gratuita.</p>
-        </div>
-        <div class="deliverable-card">
-          <div class="del-icon"><i class="fa-solid fa-bolt"></i></div>
-          <h3>Acesso Imediato</h3>
-          <p>Login enviado imediatamente por e-mail após a aprovação do seu pagamento.</p>
+          <p>Estude no seu ritmo, sem cobranças recorrentes ou limite de tempo.</p>
         </div>
       </div>
-      <div class="deliverables-cta reveal" style="text-align: center; margin-top: 48px;">
-        <a href="#beneficios" class="btn-primary utmify-ic" id="deliverables-cta-btn">
-          Ver os benefícios práticos
-          <i class="fa-solid fa-arrow-down"></i>
-        </a>
+
+      <div class="platform-preview reveal">
+        <img src="sunrise_calm.png" alt="Visão geral da plataforma Alarme Mental" loading="lazy" />
       </div>
     </div>
   </section>
 
-  <!-- ===== BENEFÍCIOS ===== -->
-  <section class="section benefits-section" id="beneficios">
+  <!-- ===== ANTES vs DEPOIS ===== -->
+  <section class="section section--beige comparison-section" id="beneficios">
     <div class="container">
-      <div class="section-header reveal">
-        <p class="section-eyebrow">Desenvolvimento</p>
-        <h2 class="section-title">Resultados reais na sua rotina.</h2>
-      </div>
-
-      <div class="benefits-grid reveal">
-        <div class="benefit-card">
-          <div class="ben-icon"><i class="fa-solid fa-circle-play"></i></div>
-          <h3>Mais ação.</h3>
-          <p>Sia da inércia com gatilhos de ativação simples e rápidos no início de cada tarefa.</p>
-        </div>
-        <div class="benefit-card">
-          <div class="ben-icon"><i class="fa-solid fa-lightbulb"></i></div>
-          <h3>Mais clareza.</h3>
-          <p>Identifique suas reais prioridades e planeje seu dia sem sobrecarga mental.</p>
-        </div>
-        <div class="benefit-card">
-          <div class="ben-icon"><i class="fa-solid fa-arrow-trend-up"></i></div>
-          <h3>Mais constância.</h3>
-          <p>Substitua o ciclo de esforço inconsistente por hábitos saudáveis e de longo prazo.</p>
-        </div>
-        <div class="benefit-card">
-          <div class="ben-icon"><i class="fa-solid fa-bullseye"></i></div>
-          <h3>Mais foco.</h3>
-          <p>Mantenha a atenção plena na tarefa atual, ignorando as distrações externas e digitais.</p>
-        </div>
-        <div class="benefit-card">
-          <div class="ben-icon"><i class="fa-solid fa-folder-tree"></i></div>
-          <h3>Mais organização.</h3>
-          <p>Aprenda a mapear e segmentar grandes demandas em etapas simples e realizáveis.</p>
-        </div>
-        <div class="benefit-card">
-          <div class="ben-icon"><i class="fa-solid fa-circle-minus"></i></div>
-          <h3>Menos procrastinação.</h3>
-          <p>Interrompa o comportamento automático de adiar obrigações importantes.</p>
-        </div>
-      </div>
-      <div class="benefits-cta reveal" style="text-align: center; margin-top: 48px;">
-        <a href="#comparacao" class="btn-primary utmify-ic" id="benefits-cta-btn">
-          Ver a transformação real (Antes vs Depois)
-          <i class="fa-solid fa-arrow-down"></i>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== COMPARAÇÃO ===== -->
-  <section class="section comparison-section" id="comparacao">
-    <div class="container">
-      <div class="section-header reveal">
-        <p class="section-eyebrow">Antes vs Depois</p>
-        <h2 class="section-title">A mudança prática.</h2>
+      <div class="section-header section-header--center reveal">
+        <p class="section-eyebrow">Transformação</p>
+        <h2 class="section-title" style="margin: 0 auto;">A mudança na sua rotina.</h2>
       </div>
 
       <div class="comparison-grid reveal">
@@ -354,15 +186,9 @@
             <li><i class="fa-solid fa-check"></i> Mais ação nas suas decisões.</li>
             <li><i class="fa-solid fa-check"></i> Mais clareza nas metas diárias.</li>
             <li><i class="fa-solid fa-check"></i> Mais organização nas entregas.</li>
-            <li><i class="fa-solid fa-check"></i> Mais consistência em sua rotina.</li>
+            <li><i class="fa-solid fa-check"></i> Mais consistência na rotina.</li>
           </ul>
         </div>
-      </div>
-      <div class="comparison-cta reveal" style="text-align: center; margin-top: 48px;">
-        <a href="#area-membros" class="btn-primary utmify-ic" id="comparison-cta-btn">
-          Visualizar a Área de Membros
-          <i class="fa-solid fa-arrow-down"></i>
-        </a>
       </div>
     </div>
   </section>
@@ -370,9 +196,9 @@
   <!-- ===== ÁREA DE MEMBROS ===== -->
   <section class="section members-section" id="area-membros">
     <div class="container">
-      <div class="section-header reveal">
+      <div class="section-header section-header--center reveal">
         <p class="section-eyebrow">Ambiente Interno</p>
-        <h2 class="section-title">Experiência simples e direta.</h2>
+        <h2 class="section-title" style="margin: 0 auto;">Acesse quando quiser. No celular ou computador.</h2>
       </div>
 
       <div class="members-gallery reveal">
@@ -382,22 +208,16 @@
         <div class="gallery-side">
           <img src="app_mockup.png" alt="Área de Membros Mobile" loading="lazy" />
           <div class="gallery-card">
-            <h3>Acesse quando quiser.</h3>
-            <p>Navegue por módulos organizados, assista a vídeos otimizados e consulte o menu lateral limpo. Estude no celular ou desktop, no seu próprio ritmo.</p>
+            <h3>Simples e direto.</h3>
+            <p>Navegue por módulos organizados, assista a vídeos otimizados e estude no seu próprio ritmo.</p>
           </div>
         </div>
-      </div>
-      <div class="members-cta reveal" style="text-align: center; margin-top: 48px;">
-        <a href="#garantia" class="btn-primary utmify-ic" id="members-cta-btn">
-          Verificar a garantia de risco zero
-          <i class="fa-solid fa-arrow-down"></i>
-        </a>
       </div>
     </div>
   </section>
 
   <!-- ===== GARANTIA ===== -->
-  <section class="section guarantee-section" id="garantia">
+  <section class="section section--beige guarantee-section" id="garantia">
     <div class="container">
       <div class="guarantee-card reveal">
         <div class="guarantee-shield">
@@ -405,12 +225,8 @@
         </div>
         <div class="guarantee-content">
           <p class="section-eyebrow">Garantia</p>
-          <h2 class="guarantee-title">Você compra sem risco.</h2>
-          <p class="guarantee-text">Você possui 7 dias de garantia integral. Caso o método não faça sentido para você, poderá solicitar o reembolso dentro do prazo previsto.</p>
-          <a href="#oferta" class="btn-primary utmify-ic" id="guarantee-cta-btn" style="margin-top: 24px; align-self: flex-start;">
-            Escolher meu plano de acesso
-            <i class="fa-solid fa-arrow-down"></i>
-          </a>
+          <h2 class="guarantee-title">7 dias de garantia. Sem risco.</h2>
+          <p class="guarantee-text">Caso o método não faça sentido para você, basta solicitar o reembolso dentro do prazo de 7 dias. Sem perguntas, sem burocracia.</p>
         </div>
       </div>
     </div>
@@ -419,10 +235,10 @@
   <!-- ===== OFERTA ===== -->
   <section class="section offer-section" id="oferta">
     <div class="container">
-      <div class="section-header reveal">
+      <div class="section-header section-header--center reveal">
         <p class="section-eyebrow">Planos</p>
-        <h2 class="section-title">Escolha o seu plano</h2>
-        <p class="section-sub">Selecione o plano ideal para reconfigurar seus hábitos e começar sua transformação diária.</p>
+        <h2 class="section-title" style="margin: 0 auto;">Escolha o seu plano</h2>
+        <p class="section-sub" style="margin: 12px auto 0;">Selecione o plano ideal para começar sua transformação.</p>
       </div>
 
       <div class="offer-grid reveal">
@@ -430,7 +246,7 @@
         <div class="offer-card">
           <div class="offer-card-header">
             <h3>Plano Básico</h3>
-            <p class="plan-desc">Acesso essencial para começar a destravar sua ação diária.</p>
+            <p class="plan-desc">Acesso essencial para começar.</p>
             <div class="offer-price">
               <span class="offer-currency">R$</span>
               <span class="offer-amount">19</span>
@@ -470,7 +286,7 @@
           <div class="best-value-badge">MAIS RECOMENDADO</div>
           <div class="offer-card-header">
             <h3>Plano Premium (Completo)</h3>
-            <p class="plan-desc">O método Alarme Mental completo com todas as ferramentas e bônus de aceleração.</p>
+            <p class="plan-desc">O método completo com todos os bônus.</p>
             <div class="offer-price-val">Valor Total: <span class="crossed-price">R$ 317,00</span></div>
             <div class="offer-price">
               <span class="offer-currency">R$</span>
@@ -511,27 +327,27 @@
         </div>
       </div>
 
-      <!-- Bloco de Reafirmação e Suporte para o Público 35-65+ -->
+      <!-- Bloco de Confiança -->
       <div class="offer-trust-block reveal">
         <div class="trust-item">
           <div class="trust-icon"><i class="fa-solid fa-shield-halved"></i></div>
           <div>
             <h4>Ambiente 100% Seguro</h4>
-            <p>Seus dados de pagamento são protegidos por criptografia SSL de 256 bits e processados com segurança pela plataforma Cakto.</p>
+            <p>Seus dados são protegidos por criptografia SSL de 256 bits e processados pela plataforma Cakto.</p>
           </div>
         </div>
         <div class="trust-item">
           <div class="trust-icon"><i class="fa-solid fa-circle-check"></i></div>
           <div>
             <h4>Acesso Duplo (E-mail + WhatsApp)</h4>
-            <p>Assim que a compra for aprovada, você receberá seus dados de acesso imediatamente por e-mail e uma mensagem de boas-vindas no celular.</p>
+            <p>Receba seus dados de acesso imediatamente por e-mail e uma mensagem de boas-vindas no celular.</p>
           </div>
         </div>
         <div class="trust-item">
           <div class="trust-icon"><i class="fa-solid fa-headset"></i></div>
           <div>
             <h4>Suporte Humano Dedicado</h4>
-            <p>Precisa de suporte ou tem dúvidas sobre a compra? Fale conosco a qualquer momento via e-mail ou diretamente pelo nosso WhatsApp.</p>
+            <p>Dúvidas sobre a compra? Fale conosco via e-mail ou WhatsApp a qualquer momento.</p>
           </div>
         </div>
       </div>
@@ -551,37 +367,37 @@
   </section>
 
   <!-- ===== FAQ ===== -->
-  <section class="section faq-section" id="faq">
+  <section class="section section--beige faq-section" id="faq">
     <div class="container">
-      <div class="section-header reveal">
+      <div class="section-header section-header--center reveal">
         <p class="section-eyebrow">Dúvidas</p>
-        <h2 class="section-title">Perguntas frequentes</h2>
+        <h2 class="section-title" style="margin: 0 auto;">Perguntas frequentes</h2>
       </div>
 
       <div class="faq-list reveal">
         <details class="faq-item">
           <summary>Como recebo acesso?</summary>
-          <p>Imediatamente após a confirmação do pagamento. Você receberá um e-mail com os dados de login e um link de acesso à nossa área de membros.</p>
+          <p>Imediatamente após a confirmação do pagamento. Você receberá um e-mail com os dados de login e um link de acesso à área de membros.</p>
         </details>
         <details class="faq-item">
           <summary>Funciona no celular?</summary>
-          <p>Sim. A plataforma de membros é 100% responsiva e otimizada para celular. Você pode assistir aos Vídeos Ativadores diretamente pelo navegador do smartphone.</p>
+          <p>Sim. A plataforma é 100% responsiva e otimizada para celular. Acesse os Vídeos Ativadores direto pelo navegador do smartphone.</p>
         </details>
         <details class="faq-item">
           <summary>Possui garantia?</summary>
-          <p>Sim. Você tem 7 dias de garantia incondicional. Se não gostar do método, basta enviar um e-mail ao suporte e solicitar o reembolso total.</p>
+          <p>Sim. Você tem 7 dias de garantia incondicional. Se não gostar, basta solicitar o reembolso total.</p>
         </details>
         <details class="faq-item">
           <summary>Quanto tempo tenho acesso?</summary>
-          <p>No Plano Básico, o acesso é válido por 1 ano. No Plano Premium (Completo), o acesso é vitalício, incluindo atualizações futuras do método.</p>
+          <p>No Plano Básico, o acesso é válido por 1 ano. No Plano Premium, o acesso é vitalício, com atualizações futuras inclusas.</p>
         </details>
         <details class="faq-item">
           <summary>Como funciona o pagamento?</summary>
-          <p>O pagamento é processado pela Cakto de forma 100% segura. Você pode pagar via Pix (liberação imediata), Cartão de Crédito em até 12x ou Boleto Bancário.</p>
+          <p>Processado pela Cakto de forma 100% segura. Pague via Pix (liberação imediata), Cartão de Crédito em até 12x ou Boleto.</p>
         </details>
         <details class="faq-item">
           <summary>Posso acessar quando quiser?</summary>
-          <p>Sim. A área de membros fica disponível 24 horas por dia, 7 dias por semana. Você pode acessar os conteúdos no seu ritmo e no seu melhor horário.</p>
+          <p>Sim. A área de membros fica disponível 24h por dia, 7 dias por semana. Acesse no seu ritmo.</p>
         </details>
       </div>
     </div>

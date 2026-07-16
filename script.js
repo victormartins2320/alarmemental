@@ -1,5 +1,5 @@
 // ================================================
-//  Alarme Mental — Premium Script (Dark Neon & Dynamic Mobile Funnel)
+//  Alarme Mental — V4 Light Premium Script
 // ================================================
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -21,11 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        // Stagger effect for sibling elements
         const siblings = entry.target.parentElement.querySelectorAll('.reveal');
         let delay = 0;
         siblings.forEach((sib, idx) => {
-          if (sib === entry.target) delay = idx * 60;
+          if (sib === entry.target) delay = idx * 80;
         });
         setTimeout(() => {
           entry.target.classList.add('visible');
@@ -34,8 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }, {
-    rootMargin: '0px 0px -60px 0px',
-    threshold: 0.12,
+    rootMargin: '0px 0px -40px 0px',
+    threshold: 0.1,
   });
 
   revealElements.forEach(el => revealObserver.observe(el));
@@ -60,15 +59,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const floatingCtaBtn = document.getElementById('floating-cta-btn');
 
   const steps = [
-    { id: 'hero', target: '#prova-visual', text: 'Ver Demonstração' },
-    { id: 'prova-visual', target: '#identificacao', text: 'Identificar Padrões' },
-    { id: 'identificacao', target: '#metodo', text: 'Ver como Funciona' },
-    { id: 'metodo', target: '#entregaveis', text: 'Ver o que Recebo' },
-    { id: 'entregaveis', target: '#beneficios', text: 'Ver Resultados Práticos' },
-    { id: 'beneficios', target: '#comparacao', text: 'Ver Antes vs Depois' },
-    { id: 'comparacao', target: '#area-membros', text: 'Ver Área de Membros' },
-    { id: 'area-membros', target: '#garantia', text: 'Ver Garantia Risco Zero' },
-    { id: 'garantia', target: '#oferta', text: 'Escolher Meu Plano' },
+    { id: 'hero', target: '#para-quem', text: 'Saiba mais' },
+    { id: 'para-quem', target: '#entregaveis', text: 'Ver o que recebo' },
+    { id: 'entregaveis', target: '#beneficios', text: 'Ver resultados' },
+    { id: 'beneficios', target: '#area-membros', text: 'Ver plataforma' },
+    { id: 'area-membros', target: '#garantia', text: 'Ver garantia' },
+    { id: 'garantia', target: '#oferta', text: 'Escolher meu plano' },
     { id: 'oferta', hide: true },
     { id: 'faq', hide: true },
     { id: 'cta-final', hide: true }
@@ -87,7 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // Determine current active section on mobile screen
     const viewportHeight = window.innerHeight;
     let currentStep = null;
 
@@ -95,7 +90,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const el = document.getElementById(steps[i].id);
       if (el) {
         const rect = el.getBoundingClientRect();
-        // If section header/body falls within active viewport center
         if (rect.top <= viewportHeight * 0.55 && rect.bottom >= viewportHeight * 0.2) {
           currentStep = steps[i];
         }
@@ -116,14 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', handleMobileFunnel, { passive: true });
   window.addEventListener('resize', handleMobileFunnel, { passive: true });
 
-  // ---- 5. CTA click tracking ----
-  document.querySelectorAll('[id$="-cta-btn"], [id^="hero-cta"], [id="floating-cta-btn"]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      if (typeof ttq !== 'undefined') {
-        ttq.track('ClickButton', { content_name: 'CTA Click' });
-      }
-    });
-  });
+
 
   // ---- 6. FAQ accordion exclusive toggle ----
   document.querySelectorAll('.faq-item').forEach(item => {
@@ -147,14 +134,14 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       downsellModal.style.display = 'flex';
       downsellModal.setAttribute('aria-hidden', 'false');
-      document.body.style.overflow = 'hidden'; // Lock background scrolling
+      document.body.style.overflow = 'hidden';
     });
 
     // Close Modal Function
     const closeModal = () => {
       downsellModal.style.display = 'none';
       downsellModal.setAttribute('aria-hidden', 'true');
-      document.body.style.overflow = ''; // Unlock background scrolling
+      document.body.style.overflow = '';
     };
 
     // Close on X Click
